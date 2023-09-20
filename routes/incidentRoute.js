@@ -10,7 +10,7 @@ const { validationResult } = require("express-validator"); // Import validation 
 const router = express.Router();
 
 // Add a New Incident
-router.post("/add-incident", authMiddleware, addIncident);
+router.post("/add-incident", addIncident);
 
 // Get an Incident by ID
 router.get("/:id", getAnIncident);
@@ -19,6 +19,6 @@ router.get("/:id", getAnIncident);
 router.post("/getallincidents", getAllIncidents);
 
 // Update an Incident by ID
-router.put("/update-a-incident/:id", authMiddleware, updateIncident);
+router.put("/update-a-incident/:id", updateIncident);
 
 module.exports = router;

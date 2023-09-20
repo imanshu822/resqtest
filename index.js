@@ -17,6 +17,8 @@ const morgan = require("morgan");
 // Connect to the database
 dbConnect();
 
+// cors policy set
+
 // Middleware
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -24,10 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Routes
-app.use("/api/user", authRouter);
+// app.use("/api/user", authRouter);
 app.use("/api/incident", incidentRoute);
-app.use("/api/agents", agentRoute);
-app.use("/api/resource", resourceRouter);
+// app.use("/api/agents", agentRoute);
+// app.use("/api/resource", resourceRouter);
 
 // 404 Not Found Middleware
 app.use(notFound);
