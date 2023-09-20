@@ -3,21 +3,19 @@ const dbConnect = require("./config/dbConnect");
 const app = express();
 const dotenv = require("dotenv").config();
 
-const authRouter = require("./routes/authRoute");
-const agentRoute = require("./routes/agentRoute");
+// const authRouter = require("./routes/authRoute");
+// const agentRoute = require("./routes/agentRoute");
 const incidentRoute = require("./routes/incidentRoute");
-const resourceRouter = require("./routes/resourceRoute");
+// const resourceRouter = require("./routes/resourceRoute");
 
 const bodyParser = require("body-parser");
-const { notFound, errorHandler } = require("./middlewares/errorHandler");
+// const { notFound, errorHandler } = require("./middlewares/errorHandler");
 const PORT = process.env.PORT || 4000;
-const cookieParser = require("cookie-parser");
+// const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 
 // Connect to the database
 dbConnect();
-
-// cors policy set
 
 // Middleware
 app.use(morgan("dev"));
