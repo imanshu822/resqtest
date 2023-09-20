@@ -19,9 +19,9 @@ dbConnect();
 
 // Middleware
 app.use(morgan("dev"));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(cookieParser());
 
 // Routes
 // app.use("/api/user", authRouter);
@@ -30,10 +30,10 @@ app.use("/api/incident", incidentRoute);
 // app.use("/api/resource", resourceRouter);
 
 // 404 Not Found Middleware
-app.use(notFound);
+// app.use(notFound);
 
 // Error Handling Middleware
-app.use(errorHandler);
+// app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

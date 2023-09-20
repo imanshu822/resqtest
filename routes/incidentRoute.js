@@ -5,7 +5,7 @@ const {
   getAllIncidents,
   updateIncident,
 } = require("../controllers/incidentsCtrl");
-const { authMiddleware } = require("../middlewares/authMiddleware");
+// const { authMiddleware } = require("../middlewares/authMiddleware");
 const { validationResult } = require("express-validator"); // Import validation functions if needed
 const router = express.Router();
 
